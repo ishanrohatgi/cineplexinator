@@ -1,0 +1,11 @@
+<mat-card  class="card" *ngIf="movieData.Poster!='N/A'">
+    <div class="image">
+        <img mat-card-image class="card-image" [src]="movieData.Poster">
+    </div>
+    <div class="details">
+            <mat-card-title>{{movieData?.Title}}</mat-card-title>
+            <mat-card-content>
+                {{movieData.Year}}
+            </mat-card-content>
+    </div>
+  </mat-card>
