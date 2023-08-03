@@ -15,7 +15,7 @@ export class SearchFormComponent implements DoCheck {
    movieSearchResult: MovieData[]=[];
    constructor(private readonly movieSearchService: MovieSearchService){}
    ngDoCheck(){
-       if(!this.movieSearchResult && this.searched.length===0){
+       if(this.searched.length===0){
         this.tabFocus.emit(0);
        }
    }

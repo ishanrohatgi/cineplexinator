@@ -17,10 +17,6 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit() {
-    setInterval(()=>{
-      console.log(this.movieSearchResult);
-      console.log(this.tabFocus);
-    },100)
     this.movieSearchService.getTrendingMovies().subscribe((resp) => {
       this.trendingMovies = resp.Search;
     })
