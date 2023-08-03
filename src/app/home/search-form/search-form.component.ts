@@ -17,6 +17,7 @@ export class SearchFormComponent implements DoCheck {
    ngDoCheck(){
        if(this.searched.length===0){
         this.tabFocus.emit(0);
+        this.movieSearchResult.length=0;
        }
    }
    onChangeHandler(){
