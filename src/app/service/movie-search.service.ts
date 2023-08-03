@@ -9,8 +9,8 @@ import { Observable } from 'rxjs';
 export class MovieSearchService {
   
   private API_KEY = '4ea7c327';
-  private POPULAR_API_URL = `http://www.omdbapi.com/?apikey=${this.API_KEY}&s=popular`;
-  private TRENDING_API_URL = `http://www.omdbapi.com/?apikey=${this.API_KEY}&s=trending`;
+  private POPULAR_API_URL = `https://www.omdbapi.com/?apikey=${this.API_KEY}&s=popular`;
+  private TRENDING_API_URL = `https://www.omdbapi.com/?apikey=${this.API_KEY}&s=trending`;
   constructor(private http: HttpClient) {}
   
   getTrendingMovies(){
@@ -21,7 +21,7 @@ export class MovieSearchService {
   }
 
   getSearchedMovie(query:string){
-    return this.http.get<any>(`http://www.omdbapi.com/?apikey=${this.API_KEY}&s=${query}`);
+    return this.http.get<any>(`https://www.omdbapi.com/?apikey=${this.API_KEY}&s=${query}`);
   }
   
 }
